@@ -1,0 +1,48 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "tutorials/embassy",
+          "docs": [
+            {
+              "id": "courses/async",
+              "path": "/docs/courses/async",
+              "sidebar": "coursesSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/docs/intro"
+            },
+            {
+              "id": "tutorials/embassy",
+              "path": "/docs/tutorials/embassy",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/docs/tutorials/embassy",
+                "label": "tutorials/embassy"
+              }
+            },
+            "coursesSidebar": {
+              "link": {
+                "path": "/docs/courses/async",
+                "label": "courses/async"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}
