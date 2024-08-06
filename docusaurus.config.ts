@@ -58,6 +58,12 @@ const config: Config = {
     ],
   ],
 
+  markdown: {
+    mermaid: true,
+  },
+
+  themes: ['@docusaurus/theme-mermaid'],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
@@ -95,7 +101,11 @@ const config: Config = {
           items: [
             {
               label: 'Courses',
-              to: '/docs/intro',
+              to: '/docs/courses/intro/rust_intro',
+            },
+            {
+              label: 'Tutorials',
+              to: '/docs/tutorials/embassy',
             },
           ],
         },

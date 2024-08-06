@@ -99,15 +99,15 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', '07f'),
+    component: ComponentCreator('/docs', 'd9f'),
     routes: [
       {
         path: '/docs',
-        component: ComponentCreator('/docs', 'a3f'),
+        component: ComponentCreator('/docs', 'd94'),
         routes: [
           {
             path: '/docs',
-            component: ComponentCreator('/docs', '292'),
+            component: ComponentCreator('/docs', '7c3'),
             routes: [
               {
                 path: '/docs/courses/async/',
@@ -118,6 +118,12 @@ export default [
               {
                 path: '/docs/courses/gpio/',
                 component: ComponentCreator('/docs/courses/gpio/', 'e40'),
+                exact: true,
+                sidebar: "coursesSidebar"
+              },
+              {
+                path: '/docs/courses/i2c/',
+                component: ComponentCreator('/docs/courses/i2c/', 'cd9'),
                 exact: true,
                 sidebar: "coursesSidebar"
               },
@@ -134,9 +140,16 @@ export default [
                 sidebar: "coursesSidebar"
               },
               {
-                path: '/docs/intro',
-                component: ComponentCreator('/docs/intro', '853'),
-                exact: true
+                path: '/docs/courses/spi/',
+                component: ComponentCreator('/docs/courses/spi/', 'eb4'),
+                exact: true,
+                sidebar: "coursesSidebar"
+              },
+              {
+                path: '/docs/courses/wifi/',
+                component: ComponentCreator('/docs/courses/wifi/', 'fd2'),
+                exact: true,
+                sidebar: "coursesSidebar"
               },
               {
                 path: '/docs/tutorials/embassy',

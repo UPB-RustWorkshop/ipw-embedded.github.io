@@ -20,5 +20,9 @@
   "previous": {
     "title": "Pulse-Width Modulation",
     "permalink": "/docs/courses/pwm/"
+  },
+  "next": {
+    "title": "Serial Peripheral Interface",
+    "permalink": "/docs/courses/spi/"
   }
 }

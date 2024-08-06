@@ -194,17 +194,17 @@
     },
     "content": "content---markdown-page-393-028"
   },
-  "/docs-07f": {
+  "/docs-d9f": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---docsaba-d7c"
     }
   },
-  "/docs-a3f": {
+  "/docs-d94": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---docs-005-788"
   },
-  "/docs-292": {
+  "/docs-7c3": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
   "/docs/courses/async/-f61": {
@@ -215,6 +215,10 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-courses-gpio-431-602"
   },
+  "/docs/courses/i2c/-cd9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-courses-i-2-c-57-b-781"
+  },
   "/docs/courses/intro/rust_intro-f63": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-courses-intro-rust-intro-176-fff"
@@ -223,9 +227,13 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-courses-pwm-c-93-c5c"
   },
-  "/docs/intro-853": {
+  "/docs/courses/spi/-eb4": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-intro-0-e-3-be1"
+    "content": "content---docs-courses-spi-406-805"
+  },
+  "/docs/courses/wifi/-fd2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-courses-wifi-cfc-1f2"
   },
   "/docs/tutorials/embassy-77f": {
     "__comp": "__comp---theme-doc-item-178-a40",

@@ -21,6 +21,11 @@
               "sidebar": "coursesSidebar"
             },
             {
+              "id": "courses/i2c/i2c",
+              "path": "/docs/courses/i2c/",
+              "sidebar": "coursesSidebar"
+            },
+            {
               "id": "courses/intro/rust_intro",
               "path": "/docs/courses/intro/rust_intro",
               "sidebar": "coursesSidebar"
@@ -31,8 +36,14 @@
               "sidebar": "coursesSidebar"
             },
             {
-              "id": "intro",
-              "path": "/docs/intro"
+              "id": "courses/spi/spi",
+              "path": "/docs/courses/spi/",
+              "sidebar": "coursesSidebar"
+            },
+            {
+              "id": "courses/wifi/wifi",
+              "path": "/docs/courses/wifi/",
+              "sidebar": "coursesSidebar"
             },
             {
               "id": "tutorials/embassy",

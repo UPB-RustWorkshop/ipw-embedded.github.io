@@ -1,7 +1,7 @@
 {
   "id": "courses/pwm/pwm",
   "title": "Pulse-Width Modulation",
-  "description": "PWM",
+  "description": "Pulse-Width Modulation",
   "source": "@site/docs/courses/pwm/pwm.md",
   "sourceDirName": "courses/pwm",
   "slug": "/courses/pwm/",
@@ -14,7 +14,7 @@
   "sidebarPosition": 3,
   "frontMatter": {
     "sidebar_position": 3,
-    "description": "PWM"
+    "description": "Pulse-Width Modulation"
   },
   "sidebar": "coursesSidebar",
   "previous": {

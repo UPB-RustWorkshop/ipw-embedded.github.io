@@ -18,6 +18,9 @@ const sidebars: SidebarsConfig = {
     'courses/gpio/gpio',
     'courses/pwm/pwm',
     'courses/async/async',
+    'courses/spi/spi',
+    'courses/i2c/i2c',
+    'courses/wifi/wifi',
   ],
 
   // But you can create a sidebar manually

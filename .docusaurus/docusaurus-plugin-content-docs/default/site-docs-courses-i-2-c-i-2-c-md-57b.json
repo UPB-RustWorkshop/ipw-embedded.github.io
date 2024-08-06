@@ -1,0 +1,28 @@
+{
+  "id": "courses/i2c/i2c",
+  "title": "Inter-Integrated Circuit",
+  "description": "Inter-Integrated Circuit",
+  "source": "@site/docs/courses/i2c/i2c.md",
+  "sourceDirName": "courses/i2c",
+  "slug": "/courses/i2c/",
+  "permalink": "/docs/courses/i2c/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/courses/i2c/i2c.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 6,
+  "frontMatter": {
+    "sidebar_position": 6,
+    "description": "Inter-Integrated Circuit"
+  },
+  "sidebar": "coursesSidebar",
+  "previous": {
+    "title": "Serial Peripheral Interface",
+    "permalink": "/docs/courses/spi/"
+  },
+  "next": {
+    "title": "Wi-Fi",
+    "permalink": "/docs/courses/wifi/"
+  }
+}
