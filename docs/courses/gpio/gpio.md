@@ -312,7 +312,7 @@ This will let us see the layout of the binary file, or the memory of the program
 
 We need to make sure that it contains the `.boot_loader` section, or else our program will never run.
 
-Further reading: [Embassy Tutorial](../tutorials/embassy)
+Further reading: [Embassy Tutorial](../../tutorials/embassy.md)
 
 ## Exercises
 

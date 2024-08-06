@@ -26,10 +26,6 @@ The OSI stack has 7 layers, out of which 5 are important:
 - L4 - transport - transmission of data from a source to a destination (TCP, UDP)
 - L7 - application - transmission of data from an application (port) of a device to an application of another device
 
-:::info
-More information on the OSI model can be found in [Lecture 08 - Networking](/docs/lecture/08).
-:::
-
 Devices that communicate in a network have associated addresses. In a TCP/IP network these addresses are called IP (Internet Protocol) addresses. There are two types of IP addresses:
 
 - IPv4 - stored on 32 bits

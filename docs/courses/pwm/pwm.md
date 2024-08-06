@@ -277,7 +277,7 @@ A **photoresistor** (or photocell) is a sensor that measures the intensity of li
 
 #### How to wire a photoresistor
 
-To wire a photoresistor, we need to connect one leg to *GND* and the other leg to a voltage divider. We remember from [Lab 01 - Hardware Introduction](../01/index.md#voltage-divider) that:
+<!-- To wire a photoresistor, we need to connect one leg to *GND* and the other leg to a voltage divider. We remember from [Lab 01 - Hardware Introduction](../01/index.md#voltage-divider) that: -->
 $$
 V_{out} = V_{in} * \frac{R_{2}}{R_{1} + R_{2}};
 $$
@@ -444,7 +444,6 @@ unsafe fn SysTick() {
 }
 ```
 
-To blink the led in bare metal, use the code provided in [Lab 03 - Exceptions & Interrupts](../03/03.md).
 :::
 
 :::info

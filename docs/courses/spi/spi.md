@@ -102,14 +102,14 @@ For example, if main wants to communicate with the second sub, it will:
 
 ## DMA
 
-When it comes to standard communication protocols that rely on [MMIO](/docs/lab/02), it would be inefficient to rely on the MCU itself to handle all of these data transfers. This is why the **Direct Memory Access** (DMA) is used. Its purpose is to offload the MCU by dealing with simple transmission to and from peripherals, and whenever it finishes a transfer, it raises an interrupt.
+When it comes to standard communication protocols that rely on [MMIO](/docs/courses/gpio/gpio.md), it would be inefficient to rely on the MCU itself to handle all of these data transfers. This is why the **Direct Memory Access** (DMA) is used. Its purpose is to offload the MCU by dealing with simple transmission to and from peripherals, and whenever it finishes a transfer, it raises an interrupt.
 
 ## SPI in Embassy
 
 In Embassy, we can use the SPI both blocking and asynchronously. The following example will be using the asynchronous version.
 
 :::warning
-The SPI can also be used synchronously, but this means that for every transfer, the thread will be blocked, as we found out in the [previous lab](/docs/lab/05/index.md).
+The SPI can also be used synchronously, but this means that for every transfer, the thread will be blocked, as we found out in the [previous lab](/docs/courses/async/async.md).
 :::
 
 First, we initialize the peripherals.
