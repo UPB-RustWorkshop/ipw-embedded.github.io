@@ -10,10 +10,10 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://ipw-embedded.github.io',
+  url: 'https://UPB-RustWorkshop.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/UPB-RustWorkshop.github.io/',
+  baseUrl: '/ipw-embedded.github.io',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
