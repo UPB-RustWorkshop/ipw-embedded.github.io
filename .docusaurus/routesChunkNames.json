@@ -194,22 +194,34 @@
     },
     "content": "content---markdown-page-393-028"
   },
-  "/docs-d7a": {
+  "/docs-07f": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---docsaba-d7c"
     }
   },
-  "/docs-b89": {
+  "/docs-a3f": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---docs-005-788"
   },
-  "/docs-c5b": {
+  "/docs-292": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
-  "/docs/courses/async-287": {
+  "/docs/courses/async/-f61": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-courses-async-2-e-1-dc5"
+    "content": "content---docs-courses-async-878-b45"
+  },
+  "/docs/courses/gpio/-e40": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-courses-gpio-431-602"
+  },
+  "/docs/courses/intro/rust_intro-f63": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-courses-intro-rust-intro-176-fff"
+  },
+  "/docs/courses/pwm/-3cd": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-courses-pwm-c-93-c5c"
   },
   "/docs/intro-853": {
     "__comp": "__comp---theme-doc-item-178-a40",

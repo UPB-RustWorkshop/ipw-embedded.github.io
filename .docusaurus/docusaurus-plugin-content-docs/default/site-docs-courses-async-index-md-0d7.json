@@ -1,0 +1,19 @@
+{
+  "id": "courses/async/index",
+  "title": "Asynchronous Development",
+  "description": "Asynchronous Development",
+  "source": "@site/docs/courses/async/index.md",
+  "sourceDirName": "courses/async",
+  "slug": "/courses/async/",
+  "permalink": "/docs/courses/async/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/courses/async/index.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "sidebar_position": 4,
+    "description": "Asynchronous Development"
+  }
+}

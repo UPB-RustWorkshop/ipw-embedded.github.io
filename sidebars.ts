@@ -13,7 +13,12 @@ import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 const sidebars: SidebarsConfig = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
   tutorialSidebar: ['tutorials/embassy'],
-  coursesSidebar: ['courses/async'],
+  coursesSidebar: [
+    'courses/intro/rust_intro',
+    'courses/gpio/gpio',
+    'courses/pwm/pwm',
+    'courses/async/async',
+  ],
 
   // But you can create a sidebar manually
   /*

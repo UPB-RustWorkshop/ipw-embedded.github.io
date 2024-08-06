@@ -99,19 +99,37 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', 'd7a'),
+    component: ComponentCreator('/docs', '07f'),
     routes: [
       {
         path: '/docs',
-        component: ComponentCreator('/docs', 'b89'),
+        component: ComponentCreator('/docs', 'a3f'),
         routes: [
           {
             path: '/docs',
-            component: ComponentCreator('/docs', 'c5b'),
+            component: ComponentCreator('/docs', '292'),
             routes: [
               {
-                path: '/docs/courses/async',
-                component: ComponentCreator('/docs/courses/async', '287'),
+                path: '/docs/courses/async/',
+                component: ComponentCreator('/docs/courses/async/', 'f61'),
+                exact: true,
+                sidebar: "coursesSidebar"
+              },
+              {
+                path: '/docs/courses/gpio/',
+                component: ComponentCreator('/docs/courses/gpio/', 'e40'),
+                exact: true,
+                sidebar: "coursesSidebar"
+              },
+              {
+                path: '/docs/courses/intro/rust_intro',
+                component: ComponentCreator('/docs/courses/intro/rust_intro', 'f63'),
+                exact: true,
+                sidebar: "coursesSidebar"
+              },
+              {
+                path: '/docs/courses/pwm/',
+                component: ComponentCreator('/docs/courses/pwm/', '3cd'),
                 exact: true,
                 sidebar: "coursesSidebar"
               },

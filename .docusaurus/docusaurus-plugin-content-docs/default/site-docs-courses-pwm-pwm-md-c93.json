@@ -1,0 +1,28 @@
+{
+  "id": "courses/pwm/pwm",
+  "title": "Pulse-Width Modulation",
+  "description": "PWM",
+  "source": "@site/docs/courses/pwm/pwm.md",
+  "sourceDirName": "courses/pwm",
+  "slug": "/courses/pwm/",
+  "permalink": "/docs/courses/pwm/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/courses/pwm/pwm.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "description": "PWM"
+  },
+  "sidebar": "coursesSidebar",
+  "previous": {
+    "title": "General Purpose Input Output",
+    "permalink": "/docs/courses/gpio/"
+  },
+  "next": {
+    "title": "Asynchronous Development",
+    "permalink": "/docs/courses/async/"
+  }
+}
