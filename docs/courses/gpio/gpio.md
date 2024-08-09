@@ -276,6 +276,16 @@ elf2uf2-rs -s -d /target/thumbv6m-none-eabi/debug/<crate_name>
 
 This will allow us to see messages sent over serial from the board.
 
+### Flashing using the Raspberry Pi Debug Probe
+
+To do that, please follow the tutorial on how to connect the probe to your board [here](/docs/tutorials/embassy.md#debugging-using-raspberry-pi-debug-probe).
+
+After connecting the probe to your PC, in order to flash the application you need to run:
+
+```sh
+probe-rs run --chip RP2040
+```
+
 ### Troubleshooting
 
 #### Link error - reset vector is missing
@@ -313,106 +323,3 @@ This will let us see the layout of the binary file, or the memory of the program
 We need to make sure that it contains the `.boot_loader` section, or else our program will never run.
 
 Further reading: [Embassy Tutorial](../../tutorials/embassy.md)
-
-## Exercises
-
-1. Use [KiCad](https://www.kicad.org/) to design a simple circuit that connects an LED to GPIO 0 (GP0). (**1p**)
-
-:::warning 
-
-The maximum current that GPIO pins output depends on the MCU. To be sure that the LED will work normally and there is no risk of destruction, a resistor has to be added to limit the current level *below* the maximum GPIO output current.
-
-:::
-
-2. Write a program using Embassy that set on HIGH the LED connected to GPIO pin 0 (GP0). (**2p**)
-
-:::danger 
-
-Please make sure the lab professor verifies your circuit before it is powered up.
-
-:::
-
-3. Write a program using Embassy that blinks the LED connected to GPIO pin 0 (GP0) every 300ms. (**2p**)
-
-:::note
-
-For the purpose of this lab, please use `await` as is, think that for using the `Timer`, you have to add `.await` after the `after` function.
-
-:::
-
-4. Write a program using `embassy-rs` that will write the message "The button was pressed" to the console every time button A is pressed. Take a look at the Pico Explorer Base's pinout to determine the pin to which button A is connected. (**2p**)
-
-<div align="center">
-![Pico Explorer Pinout](../images/explorer_pins.jpg)
-</div>
-
-:::info
-
-The Raspberry Pi Pico does not have an integrated debugger, so writing messages to the console is done
-with a simulated serial port over the USB. This implies the usage of a USB driver.
-
-```rust
-use embassy_rp::usb::{Driver, InterruptHandler};
-use embassy_rp::{bind_interrupts, peripherals::USB};
-use log::info;
-
-// Use for the serial over USB driver
-bind_interrupts!(struct Irqs {
-    USBCTRL_IRQ => InterruptHandler<USB>;
-});
-
-
-// The task used by the serial port driver 
-// over USB
-#[embassy_executor::task]
-async fn logger_task(driver: Driver<'static, USB>) {
-    embassy_usb_logger::run!(1024, log::LevelFilter::Info, driver);
-}
-
-#[embassy_executor::main]
-async fn main(spawner: Spawner) {
-    let peripherals = embassy_rp::init(Default::default());
-
-    // Start the serial port over USB driver
-    let driver = Driver::new(peripherals.USB, Irqs);
-    spawner.spawn(logger_task(driver)).unwrap();
-
-    // ...
-
-    info!("message");
-}
-```
-
-:::warning
-
-Make sure you sleep while looping to read the button's value, otherwise 
-the USB driver's task will not be able to run and the messages will 
-not be printed.
-
-:::
-
-:::
-
-5. Write a Rust program using `embassy-rs` that toggles the LED every time button A is pressed. (**1p**)
-
-6. Write a Rust program that sets on HIGH the LED connected to GPIO pin 0 (GP0). (**1p**)
-   1. use the `rp2040-pac` crate
-   2. use bare metal
-
-7. Write a Rust program that blinks the LED connected to GPIO pin 0 (GP0) every 300ms. (**1p**)
-   1. use the `rp2040-pac` crate - write a `PinDriver` that implements the [`OutputPin`](https://docs.rs/embedded-hal/latest/embedded_hal/digital/trait.OutputPin.html) trait
-   2. use bare metal - write a `PinDriver` that implements the [`OutputPin`](https://docs.rs/embedded-hal/latest/embedded_hal/digital/trait.OutputPin.html) trait
-
-## Advanced topics
-
-### Debouncing techniques for stable input reading.
-
-Noise is produced whenever a pushbutton or other switch is moved. Because the switch contact is made of metal and has some elasticity, there is some noise (contact). The switch literally bounces a few times once it makes contact with a metal surface when it is shifted into a new position. This contact is known as bounce. 
-
-<div align="center">
-![Button Bounce](images/button-bounce.png)
-</div>
-
-The image above shows the signal produced by a button when pressed.
-
-The most correct way to correct the bouncing problem is the hardware one, but there are also software methods to correct the problem. For more details and examples, consult the documentation from Embassy-rs and the examples provided by them.

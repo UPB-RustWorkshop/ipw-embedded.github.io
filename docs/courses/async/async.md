@@ -28,7 +28,7 @@ A task in Embassy is represented by an *asynchronous function*. Asynchronous fun
 #[embassy_executor::task]
 async fn button_pressed(mut led: Output<'static, PIN_X>, mut button: Input<'static, PIN_X>) {
     loop {
-    info!("waiting for button press");
+        info!("waiting for button press");
         button.wait_for_falling_edge().await;
     }
 }
@@ -158,7 +158,7 @@ Sometimes we need to `.await` several futures at the same time. Embassy provides
 
 #### `select`
 
-In some cases, we might find ourselves in the situation where we need to await multiple futures at a time. For example, we want to wait for a button press *and* wait for a timer to expire, and we deal with each future completion in different ways.
+In some cases, we might find ourselves in th e situation where we need to await multiple futures at a time. For example, we want to wait for a button press *and* wait for a timer to expire, and we deal with each future completion in different ways.
 
 There is a function in Embassy that allows us to do this: `select`. It takes two `Future`s as arguments, and polls both of them to see which one completes first.
 

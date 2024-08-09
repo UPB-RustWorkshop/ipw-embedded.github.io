@@ -272,21 +272,3 @@ If we wanted to write both `REG_A` and `REG_B` to `0x00`:
 let tx_buf = [REG_A, 0x00, REG_B, 0x00];
 i2c.write(BMP280_ADDR, &tx_buf).await.unwrap();
 ```
-
-## Exercises
-
-1. Connect the BMP280 **with I2C**. Use Kicad to draw the schematic. (**1p**)
-
-2. Read the value of the `id` register using I2C and print it over serial. (**2p**)
-
-3. Get the pressure and temperature readings from the sensor, **using I2C**.
-
-- Write the `ctrl_meas` register with appropiate configuration values. You can find information on the contents you should write to this register at section 4.3.4 of the datasheet. (**2p**)
-- Read the raw pressure value and print it over the serial. (**2p**)
-- Read the raw temperature value and print it over the serial. (**2p**)
-
-:::tip
-Use what you learned in the last lab.
-:::
-
-4. Show the temperature and pressure values on the screen. (**1p**)

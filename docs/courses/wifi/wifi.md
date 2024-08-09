@@ -31,7 +31,7 @@ Devices that communicate in a network have associated addresses. In a TCP/IP net
 - IPv4 - stored on 32 bits
 - IPv6 - newer, stored on 128 bits
 
-The IPv6 solves the problem of an evergrowing number of devices with networking capabilities; a higher resolution for the IP address means more unique addresses that can be assigned. We will be discussing only the IPv4 in this lab, since it is most commonly used in local networks.
+The IPv6 solves the problem of an ever growing number of devices with networking capabilities; a higher resolution for the IP address means more unique addresses that can be assigned. We will be discussing only the IPv4 in this lab, since it is most commonly used in local networks.
 
 ### IPv4
 
@@ -239,7 +239,7 @@ Once we have defined the configuration, we need to instantiate and run the netwo
 
 ```rust
 // Generate random seed
-let seed = 0x0123_4567_89ab_cdef; // chosen by fair dice roll. guarenteed to be random.
+let seed = 0x0123_4567_89ab_cdef; // chosen by fair dice roll. guaranteed to be random.
 
 // Init network stack
 static STACK: StaticCell<Stack<cyw43::NetDriver<'static>>> = StaticCell::new();
@@ -446,79 +446,3 @@ if let Err(e) = socket.connect(IpEndpoint::new(IpAddress::v4(1,2,3,5), 1234)).aw
     continue;
 }
 ```
-
-## Exercises
-
-1. The lab skeleton contains an example of setting up the Wi-Fi and connecting to an access point.
-   - Scan for local networks. (**1p**)
-   - Modify the code in order to connect to an existing network. Once connected, determine the IP address that has been assigned to the Pico through DHCP and the default gateway of the network. (**1p**)
-
-:::tip
-You can use `stack.config_v4()` to find the assigned IP address and default gateway. 
-:::
-
-- Use a static IP address instead of a dynamic one. You can use the IP determined at the previous point. (**1p**)
-
-1. Test the example by connecting your computer to the Pico through Wi-Fi. Use the *Wyliodrin* network, the password will be written on the blackboard. Connect both the Pi and the laptop. Use `netcat` or any alternative to send a TCP packet to the Pico server from your computer. You should receive back the same string. (**1p**)
-
-:::tip
-On Windows, you can use [NCat](https://nmap.org/download.html#windows). The command for establishing a TCP connection is:
-
-```shell
-ncat [ip_address] [port]
-```
-
-To send a packet, write any string in the terminal and press enter. You should receive back the same string, since this is what our server is currently configured to do.
-You can run `ncat -h` to see a list of other available parameters for this command.
-:::
-
-3. Start a server on the pico that sends a message through Wi-Fi to your computer whenever a button is pressed. Use an UDP socket instead of TCP. (**2p**)
-
-Use both `netcat` and the provided `server` code to open an UDP client socket on your PC that receives the messages from the Pico. Just create a new crate in a different folder with `cargo init`, then use the following code snippet:
-
-```rust
-use tokio::net::UdpSocket;
-use std::{io, str::from_utf8};
-
-#[tokio::main]
-async fn main() -> io::Result<()> {
-    let sock = UdpSocket::bind("0.0.0.0:1234").await?; // 0.0.0.0 means any network interface
-    let mut buf = [0; 1024];
-    loop {
-        let (len, addr) = sock.recv_from(&mut buf).await?;
-        println!("Received from {:?}", addr);
-        println!("{}", from_utf8(&buf[..len]).unwrap().trim());
-    }
-}
-```
-
-Then, modify the `Cargo.toml` dependencies by adding this line: `tokio = { version = "1", features = ["full"] }`, or use `cargo add tokio --features=full`. Then run `cargo run`.
-
-:::note
-You will need to specify the IP address of your computer in the `send_to` function to send the message. The port is also required; we can use the `-p` argument for `ncat` to specify on which port the computer should listen for the message, or if you're using the Rust server, you can modify the port in the code (`0.0.0.0:port`).
-:::
-
-:::tip
-You can transform a string slice to bytes using `as_bytes()`.
-:::
-
-4. Modify the server so that you can *also* receive commands from your computer to turn an LED on and off. (**1p**)
-
-- `led:on` - command for turning on the LED
-- `led:off` - command for turning off the LED
-
-:::tip
-Use *select* to await multiple futures (wait for button press and read from socket). Refer to Lab 5.
-:::
-
-5. Configure the Pico as an access point. You will need to set a static IP address both for the Pico and your computer, to make sure they are both in the same subnet, so that they can communicate. (**1p**)
-
-:::info
-To set a static IP for your computer when connecting to the Pico, choose "Properties" and configure the static IP for your computer there.
-
-![wifi_properties](images/properties.png)
-:::
-
-6. Connect two Picos together through Wi-Fi. Control the LED connected to one Pico through a button connected to the second Pico. One team can configure the connection for the LED Pico (server side), and another team the connection for the button Pico (client side). (**2p**)
-
-- `button:pressed` - signal for the button press
