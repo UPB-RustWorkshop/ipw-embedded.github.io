@@ -22,6 +22,12 @@ const sidebars: SidebarsConfig = {
     'courses/i2c/i2c',
     'courses/wifi/wifi',
   ],
+  labsSidebar: [
+	  'labs/lab00',
+	  'labs/lab01',
+	  'labs/lab02',
+	  /* 'labs/lab03' */
+  ]
 
   // But you can create a sidebar manually
   /*

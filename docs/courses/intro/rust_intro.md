@@ -672,28 +672,7 @@ In order to run the program we may be anywhere in the crate's folder and execute
 cargo run
 ```
 
-## Exercises
-
-:::tip
-If you don't have Rust installed, you can use [Rust Playground](https://play.rust-lang.org/) to solve the topics.
-:::
-
-:::info
-Before tackling the exercises, take a look and cover chapters [1](https://tourofrust.com/chapter_1_en.html), [2](https://tourofrust.com/chapter_2_en.html) and [3](https://tourofrust.com/chapter_3_en.html) of [Tour of Rust](https://tourofrust.com/) tutorials.
-:::
-
-1. Write a program that prints your name.
-1. Define two variables and assign them a numerical value. Shows the maximum value between the two without using a temporary variable.
-1. Write a function that checks if a number is divisible by n.
-1. Define an array of numbers and write code to display the maximum value.
-1. Define a structure called Computer that defines the brand, processor name, and memory size of a computer.  
-  a. Write an associated (static) function called new that creates an instance of the structure.
-  b. Write a method called display that prints all the information.
-1. Define an array with elements of type Computer. Write a program that displays a menu with the following options:  
-  a. print all computers  
-  b. print the computer with the largest amount of memory  
-Read the keyboard keys and perform the selected option until you read something different from a and b.
-
 [^java_unsigned]: Starting with Java 8, the `Number` classes have some helper methods, like `compareUnsigned` and `toUnsigned...` that allow the usage and manipulation of unsigned numbers.
 
 [^c_int_type]: The size of `int` is implementation defined, C99 only specifying the minimum guaranteed size of 2 bytes.
+

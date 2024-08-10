@@ -7,7 +7,7 @@ import rehypeKatex from 'rehype-katex';
 const config: Config = {
   title: 'Embedded Systems @ IP Workshop',
   tagline: 'Embedded in a Rusty fashion 🚀',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/Original_Ferris.ico',
 
   // Set the production url of your site here
   url: 'https://UPB-RustWorkshop.github.io',
@@ -87,6 +87,12 @@ const config: Config = {
           label: 'Tutorials',
         },
         {
+          type: 'docSidebar',
+          sidebarId: 'labsSidebar',
+          position: 'left',
+          label: 'Labs',
+        },
+        {
           href: 'https://github.com/facebook/docusaurus',
           label: 'GitHub',
           position: 'right',
@@ -106,6 +112,10 @@ const config: Config = {
             {
               label: 'Tutorials',
               to: '/docs/tutorials/embassy',
+            },
+            {
+              label: 'Labs',
+              to: '/docs/labs/lab01',
             },
           ],
         },
