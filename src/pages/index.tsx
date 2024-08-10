@@ -19,8 +19,8 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/courses/intro/rust_intro">
-            Docusaurus Tutorial - 5min ⏱️
+            to="/docs/tutorials/embassy">
+            Rust & Embassy Setup Tutorial - 15min ⏱️
           </Link>
         </div>
       </div>

@@ -5,8 +5,8 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'IPW Embedded',
+  tagline: 'Embedded in a Rusty fashion',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
