@@ -40,16 +40,9 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/UPB-RustWorkshop/ipw-embedded.github.io',
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -70,7 +63,7 @@ const config: Config = {
     navbar: {
       title: 'Embedded Systems & Rust',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Embedded Systems & Rust',
         src: 'img/Original_Ferris.svg',
       },
       items: [
@@ -93,7 +86,7 @@ const config: Config = {
           label: 'Labs',
         },
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/UPB-RustWorkshop',
           label: 'GitHub',
           position: 'right',
         },
@@ -123,34 +116,30 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'IP Workshop',
+              href: 'https://www.ipworkshop.ro/',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              label: 'Instagram',
+              href: 'https://www.instagram.com/ipworkshop.ro/',
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: 'Facebook',
+              href: 'https://www.facebook.com/ipworkshop',
             },
           ],
         },
         {
-          title: 'More',
+          title: 'Get involved!',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/UPB-RustWorkshop',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Ideas & Projects Workshop, Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
